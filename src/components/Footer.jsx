@@ -1,5 +1,6 @@
 import React from "react";
-import "./styles/styles.css"
+
+
 
 var currTime = new Date();
 var year = currTime.getFullYear();
