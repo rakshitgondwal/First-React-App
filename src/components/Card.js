@@ -1,28 +1,24 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Body from "./Body";
-import Footer from "./Footer";
+import Navbar from "./format/Navbar";
+import Body from "./format/Body";
+import Footer from "./format/Footer";
 import Notes from "../notes"
 
-function createNotes (note){
-return (
-    <Body 
-    key = {note.key}
-    title = {note.title}
-    content = {note.content}
-    />
- )
-}
 
-
-function Card(props){
-return(
-    <div>
-    <Navbar />
-    {Notes.map(createNotes)}
-    <Footer />
-</div>
-)
+function Card() {
+    return (
+        <div>
+            <Navbar />
+            {Notes.map(note =>
+            (<Body
+                key={note.key}
+                title={note.title}
+                content={note.content}
+            />)
+            )}
+            <Footer />
+        </div>
+    )
 }
 
 export default Card;
