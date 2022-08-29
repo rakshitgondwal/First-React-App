@@ -7,7 +7,7 @@ function Footer(){
   var year = currTime.getFullYear();
 
   return( <footer className="footer text-center">
-  <p className="footerp items-center justify-between">"Copyright @"{year}</p>
+  <p className="footerp items-center justify-between">Copyright @{year}</p>
 </footer>);
    
 }
